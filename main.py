@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+import os
 
 # Ask user for year
 year = input("Which year would you like to travel to? (Format YYYY-MM-DD): ")
@@ -20,11 +21,11 @@ song_list = [element.getText().strip() for element in songs]
 print(song_list)
 # --------------------------------Spotify------------------------------------------
 # CONSTANTS
-spotify_id = '85ba2817315a4d03becaae4b04658376'
-spotify_secret = '2538a1d6c34d493eada3b760cde1606f'
+spotify_id = os.environ.get('SPOTIFY_ID')
+spotify_secret = os.environ.get('SPOTIFY_SECRET')
 spotify_redirect_URI = 'http://example.com'
 
-spotify_user_id = '1137868650'
+spotify_user_id = os.environ.get('SPOTIFY_USER_ID')
 creating_playlist_endpoint = f'https://api.spotify.com/v1/users/{spotify_user_id}/playlists'
 scope = "playlist-modify-private"
 
