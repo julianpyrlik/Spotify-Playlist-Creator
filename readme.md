@@ -57,21 +57,21 @@ Spotify API
 
 How it Works
 
-The script asks the user for the desired year.
+1. The script asks the user for the desired year.
 
-It constructs a URL for the Billboard Hot 100 chart for that year.
+2. It constructs a URL for the Billboard Hot 100 chart for that year.
 
-It uses the requests library to fetch the webpage content.
+3. It uses the requests library to fetch the webpage content.
 
-It uses Beautiful Soup to parse the HTML and extract the song titles.
+4. It uses Beautiful Soup to parse the HTML and extract the song titles.
 
-It authenticates with the Spotify API using your credentials stored in the .env file.
+5. It authenticates with the Spotify API using your credentials stored in the .env file.
 
-It searches for each song title on Spotify and retrieves the corresponding URI.
+6. It searches for each song title on Spotify and retrieves the corresponding URI.
 
-It creates a new private playlist on your Spotify account.
+7. It creates a new private playlist on your Spotify account.
 
-Finally, it adds the retrieved song URIs to the newly created playlist.
+8. Finally, it adds the retrieved song URIs to the newly created playlist.
 
 
 ## Roadmap
